@@ -1,0 +1,63 @@
+
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:"Segoe UI", sans-serif; background:linear-gradient(135deg,#2d033b,#810ca8); color:#fff; min-height:100vh; display:flex; }
+
+
+.front-page {
+  display:flex; flex-direction:column; justify-content:center; align-items:center;
+  text-align:center; height:100vh; width:100%;
+}
+.front-page h1 { font-size:36px; margin-bottom:20px; }
+.front-page p { font-size:18px; margin-bottom:30px; color:#e0aaff; }
+.front-page button { padding:12px 24px; border:none; border-radius:6px; background:#5a189a; color:#fff; font-size:16px; cursor:pointer; }
+.front-page button:hover { background:#7b2cbf; }
+
+
+.container { display:flex; flex:1; width:100%; }
+
+.sidebar { width:220px; background:#3d065f; padding:20px; min-height:100vh; }
+.sidebar h2 { margin-bottom:15px; color:#e0aaff; }
+.sidebar ul { list-style:none; }
+.sidebar ul li { margin:12px 0; }
+.sidebar ul li a { text-decoration:none; color:#fff; font-weight:bold; transition:.3s; }
+.sidebar ul li a:hover { color:#e0aaff; }
+
+.app { flex:1; padding:30px; }
+
+
+header { display:flex; justify-content:space-between; align-items:center; margin-bottom:20px; }
+header h1 { font-size:28px; }
+header button { background:#5a189a; color:white; border:none; padding:8px 14px; cursor:pointer; border-radius:6px; }
+header button:hover { background:#7b2cbf; }
+
+
+.task-input { display:flex; gap:10px; margin-bottom:20px; }
+.task-input input, .task-input select, .task-input button { padding:10px; border:none; border-radius:6px; }
+.task-input input { flex:1; }
+.task-input button { background:#5a189a; color:#fff; cursor:pointer; }
+.task-input button:hover { background:#7b2cbf; }
+
+
+ul { list-style:none; }
+li { background:#4a0e69; margin:10px 0; padding:15px; border-radius:6px; display:flex; justify-content:space-between; align-items:center; }
+li.completed { text-decoration:line-through; background:#3d065f; opacity:.7; }
+li.trashed { background:#2e0034; opacity:.6; }
+
+.task-meta { font-size:12px; margin-left:10px; }
+.badge { padding:2px 6px; border-radius:4px; font-size:12px; }
+.badge.low { background:#2ecc71; }
+.badge.medium { background:#f1c40f; }
+.badge.high { background:#e74c3c; }
+
+.task-buttons button { margin-left:8px; padding:5px 8px; border:none; border-radius:4px; cursor:pointer; color:#fff; }
+.task-buttons .complete { background:#27ae60; }
+.task-buttons .delete { background:#c0392b; }
+.task-buttons .edit { background:#2980b9; }
+.task-buttons .restore { background:#f39c12; }
+
+
+@media(max-width:768px){
+  .container{ flex-direction:column; }
+  .sidebar{ width:100%; min-height:auto; }
+  .task-input{ flex-direction:column; }
+}

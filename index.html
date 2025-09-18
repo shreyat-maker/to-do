@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mr. Butterfly To-Do App</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  
+  <div class="front-page" id="frontPage">
+    <h1>✨ Welcome to To-Do ✨</h1>
+    <p>Stay organized, stay productive. Let’s get started!</p>
+    <button id="startBtn">Start App</button>
+  </div>
+
+  
+  <div class="container" id="appContainer" style="display:none;">
+  
+    <aside class="sidebar">
+      <h2>Navigation</h2>
+      <ul>
+        <li><a href="#" id="showTasks">All Tasks (<span id="countTasks">0</span>)</a></li>
+        <li><a href="#" id="showCompleted">Completed Tasks (<span id="countCompleted">0</span>)</a></li>
+        <li><a href="#" id="showTrash">Trash (<span id="countTrash">0</span>)</a></li>
+        <li><a href="#" id="showNotes">Notes 📝</a></li>
+      </ul>
+    </aside>
+
+    <main class="app">
+      <header>
+        <h1>To-Do List</h1>
+        <button id="clearAll">Clear All</button>
+      </header>
+
+      
+      <div class="task-input" id="taskInputSection">
+        <input type="text" id="taskInput" placeholder="Enter a new task...">
+        <select id="prioritySelect">
+          <option value="Low">🟢 Low</option>
+          <option value="Medium">🟡 Medium</option>
+          <option value="High">🔴 High</option>
+        </select>
+        <input type="date" id="dueDate">
+        <button id="addTask">Add Task</button>
+      </div>
+
+      <ul id="taskList"></ul>
+
+      
+      <section id="completedSection" style="display:none;">
+        <h2>Completed Tasks ✅</h2>
+        <ul id="completedList"></ul>
+      </section>
+
+      
+      <section id="trashSection" style="display:none;">
+        <h2>Deleted Tasks 🗑️</h2>
+        <ul id="trashList"></ul>
+      </section>
+
+      <section id="notesSection" style="display:none;">
+        <h2>My Notes 📝</h2>
+        <div class="task-input">
+          <input type="text" id="noteInput" placeholder="Write a note...">
+          <button id="addNote">Add Note</button>
+          <button id="clearNotes">Clear Notes</button>
+        </div>
+        <ul id="notesList"></ul>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
